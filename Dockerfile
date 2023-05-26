@@ -4,7 +4,7 @@ RUN sed -i "s/deb.debian.org/mirrors.ustc.edu.cn/g" /etc/apt/sources.list \
     && apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y wget xz-utils dos2unix \
-    && wget https://zipchannel.top:4001/https://raw.githubusercontent.com/zipated/temp/main/miao-yunzai-docker-ffmpeg/ffmpeg-git-$(dpkg --print-architecture)-static.tar.xz \
+    && wget https://ghproxy.com/https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-$(dpkg --print-architecture)-static.tar.xz \
     && mkdir -p /res/ffmpeg \
     && tar -xvf ./ffmpeg-git-$(dpkg --print-architecture)-static.tar.xz -C /res/ffmpeg --strip-components 1
     
