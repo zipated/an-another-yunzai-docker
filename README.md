@@ -1,4 +1,4 @@
-自用trss yunzai的docker镜像
+自用trss yunzai的docker镜像（不带py,仅带ffmpeg
 
 主要是不想用那个脚本（
 
@@ -6,26 +6,32 @@
 
 #
 
-docker-compose.yaml部分参考
+docker-compose.yaml部分参考（自行下载/修改映射需要的部分，例如[genshin](https://github.com/TimeRainStarSky/Yunzai-genshin)、[miao-plugin](https://github.com/yoimiya-kokomi/miao-plugin)、[默认的js插件](https://github.com/TimeRainStarSky/Yunzai/tree/main/plugins/example)或其他插件/适配器
 ```
   trss-yunzai:
     container_name: TRSS-Yunzai
-    image: zipated/trss-yunzai:latest
+    build: .
     restart: always
     #ports:
-      #- "50831:50831"                                   # 映射锅巴插件端口，格式"主机端口:容器内部端口"
+      # - "50831:50831"                                   # 映射锅巴插件端口，格式"主机端口:容器内部端口"
     volumes:
-      - ./Yunzai/data:/app/Yunzai-Bot/data
-      - ./Yunzai/config:/app/Yunzai-Bot/config/config
-      - ./Yunzai/plugins/genshin:/app/Yunzai-Bot/plugins/genshin
-      - ./Yunzai/plugins/TRSS-Plugin:/app/Yunzai-Bot/plugins/TRSS-Plugin
-      - ./Yunzai/plugins/miao-plugin:/app/Yunzai-Bot/plugins/miao-plugin
-      #- ./Yunzai/plugins/xiaoyao-cvs-plugin:/app/Yunzai-Bot/plugins/xiaoyao-cvs-plugin    # 图鉴插件
-      #- ./Yunzai/plugins/Guoba-Plugin:/app/Yunzai-Bot/plugins/Guoba-Plugin                # 锅巴插件
-      #- ./Yunzai/plugins/achievements-plugin:/app/Yunzai-Bot/plugins/achievements-plugin  # 成就插件
-      #- ./Yunzai/plugins/expand-plugin:/app/Yunzai-Bot/plugins/expand-plugin              # 拓展插件
-      #- ./Yunzai/plugins/flower-plugin:/app/Yunzai-Bot/plugins/flower-plugin              # 抽卡插件
-      #- ./Yunzai/plugins/StarRail-plugin:/app/Yunzai-Bot/plugins/StarRail-plugin          # 星铁插件
+      - ./Yunzai/data:/app/Yunzai-Bot/data                                                # 用户数据
+      - ./Yunzai/config:/app/Yunzai-Bot/config/config                                     # 配置文件
+      - ./Yunzai/plugins/genshin:/app/Yunzai-Bot/plugins/genshin                          # 原神核心文件
+      - ./Yunzai/resources:/app/Yunzai-Bot/resources                                      # 额外资源文件
+      - ./Yunzai/plugins/example:/app/Yunzai-Bot/plugins/example                          # js插件
+      # - ./Yunzai/plugins/TRSS-Plugin:/app/Yunzai-Bot/plugins/TRSS-Plugin                  # TRSS插件
+      - ./Yunzai/plugins/miao-plugin:/app/Yunzai-Bot/plugins/miao-plugin                  # 喵喵插件
+      # - ./Yunzai/plugins/ICQQ-Plugin:/app/Yunzai-Bot/plugins/ICQQ-Plugin                  # TRSS-ICQQ
+      # - ./Yunzai/plugins/QQGuild-Plugin:/app/Yunzai-Bot/plugins/QQGuild-Plugin            # TRSS-QQ频道适配器
+      # - ./Yunzai/plugins/Telegram-Plugin:/app/Yunzai-Bot/plugins/Telegram-Plugin          # TRSS-Telegram适配器
+      # - ./Yunzai/plugins/KOOK-Plugin:/app/Yunzai-Bot/plugins/KOOK-Plugin                  # TRSS-KOOK适配器
+      # - ./Yunzai/plugins/Discord-Plugin:/app/Yunzai-Bot/plugins/Discord-Plugin            # TRSS-Discord适配器
+      # - ./Yunzai/plugins/xiaoyao-cvs-plugin:/app/Yunzai-Bot/plugins/xiaoyao-cvs-plugin    # 图鉴插件
+      # - ./Yunzai/plugins/Guoba-Plugin:/app/Yunzai-Bot/plugins/Guoba-Plugin                # 锅巴插件
+      # - ./Yunzai/plugins/expand-plugin:/app/Yunzai-Bot/plugins/expand-plugin              # 拓展插件
+      # - ./Yunzai/plugins/flower-plugin:/app/Yunzai-Bot/plugins/flower-plugin              # 抽卡插件
+      # - ./Yunzai/plugins/StarRail-plugin:/app/Yunzai-Bot/plugins/StarRail-plugin          # 星铁插件
     depends_on:
       redis: { condition: service_healthy }
     deploy:
