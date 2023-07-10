@@ -169,14 +169,12 @@ if [ -d $PY_PLUGIN_PATH"/.git" ]; then
 
     if [[ ! -f "$HOME/.ovo/py.ok" ]]; then
         echo -e "\n ================ \n ${Info} ${GreenBG} 更新 py-plugin 运行依赖 ${Font} \n ================ \n"
-    fi
-    pnpm install iconv-lite @grpc/grpc-js @grpc/proto-loader -w
-    if [[ ! -f "$HOME/.ovo/py.ok" ]]; then
         poetry config virtualenvs.in-project true
         poetry install
         touch ~/.ovo/py.ok
     fi
-
+    pnpm install --filter=py-plugin
+    
     echo -e "\n ================ \n ${Version} ${BlueBG} py-plugin 插件版本信息 ${Font} \n ================ \n"
 
     git log -1 --pretty=format:"%h - %an, %ar (%cd) : %s"
