@@ -1,4 +1,4 @@
-自用trss yunzai的docker镜像（不带py,仅带ffmpeg
+自用trss yunzai的docker镜像（需要py的用Dockerfile_poetry
 
 主要是不想用那个脚本（
 
@@ -32,6 +32,7 @@ docker-compose.yaml部分参考（自行下载/修改映射需要的部分，例
       # - ./Yunzai/plugins/expand-plugin:/app/Yunzai-Bot/plugins/expand-plugin              # 拓展插件
       # - ./Yunzai/plugins/flower-plugin:/app/Yunzai-Bot/plugins/flower-plugin              # 抽卡插件
       # - ./Yunzai/plugins/StarRail-plugin:/app/Yunzai-Bot/plugins/StarRail-plugin          # 星铁插件
+      # - ./Yunzai/plugins/py-plugin:/app/Yunzai-Bot/plugins/py-plugin                      # py-plugin
     depends_on:
       redis: { condition: service_healthy }
     deploy:
