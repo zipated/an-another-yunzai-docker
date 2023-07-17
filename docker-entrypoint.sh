@@ -22,15 +22,7 @@ if [[ ! -d "$HOME/.ovo" ]]; then
 fi
 
 cd /app/Yunzai-Bot
-if [[ -n $(git status -s) ]]; then
-    echo -e "\n当前工作区有修改，尝试暂存后更新。"
-    git add .
-    git stash
-    git pull origin main --allow-unrelated-histories --rebase
-    git stash pop
-else
-    git pull
-fi
+git pull
 pnpm install -P --registry=https://registry.npmmirror.com
 
 if [ ! -d $GENSHIN_PATH"/.git" ]; then
