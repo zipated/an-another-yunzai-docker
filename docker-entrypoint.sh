@@ -29,7 +29,7 @@ if [[ -n $(git status -s) ]]; then
     git pull origin main --allow-unrelated-histories --rebase
     git stash pop
 else
-    git pull origin master --allow-unrelated-histories
+    git pull
 fi
 pnpm install -P --registry=https://registry.npmmirror.com
 
@@ -46,7 +46,7 @@ if [[ -n $(git status -s) ]]; then
     git pull origin main --allow-unrelated-histories --rebase
     git stash pop
 else
-    git pull origin master --allow-unrelated-histories
+    git pull
 fi
 
 if [ ! -d $MIAO_PLUGIN_PATH"/.git" ]; then
