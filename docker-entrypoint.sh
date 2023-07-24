@@ -125,7 +125,7 @@ fi
 
 if [ -d $ICQQ_PLUGIN_PATH"/.git" ] || [ -d $QQGUILD_PLUGIN_PATH"/.git" ] || [ -d $TELEGRAM_PLUGIN_PATH"/.git" ] || [ -d $KOOK_PLUGIN_PATH"/.git" ] || [ -d $DISCORD_PLUGIN_PATH"/.git" ]; then
     cd /app/Yunzai-Bot
-    pnpm
+    pnpm install
 fi
 
 if [ -d $GUOBA_PLUGIN_PATH"/.git" ]; then
