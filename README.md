@@ -1,18 +1,25 @@
-自用的如标题的某机器人的docker镜像（需要py的用Dockerfile_poetry
+<strong>自用</strong>的某机器人的docker镜像（需要py的用Dockerfile_poetry
 
-主要是不想用那个脚本（
+主要是不想用那个脚本~~（从喵喵迁移过来~~
 
 参考喵和SirlyDreamer/Yunzai-Bot-Docker
 
-适配器配置文件问题自行解决
+<details><summary>适配器配置文件问题建议自行解决</summary>
 
-<summary>建议不要用我这个，反正没人看
-  <details>TimeRainStarSky也不喜欢</details>
-</summary>
+  要是问为什么不丢到config/config会被某机器人的项目所有者踢出他能管到的群
+
+</details>
+
+
+<details><summary>建议不要用我这个，反正没人看</summary>
+
+  TimeRainStarSky也不喜欢
+
+</details>
 
 #
 
-docker-compose.yaml部分参考（自行下载/修改映射需要的部分，例如[genshin]、[miao-plugin](https://github.com/yoimiya-kokomi/miao-plugin)、[默认的js插件]或其他插件/适配器
+docker-compose.yaml部分参考（自行下载/修改映射需要的部分，例如[genshin]、[miao-plugin](https://github.com/yoimiya-kokomi/miao-plugin)、[默认的js插件]或其他插件/适配器~~（虽然前面这几个默认会带/下载~~
 ```
   trss-yunzai:
     container_name: TRSS-Yunzai

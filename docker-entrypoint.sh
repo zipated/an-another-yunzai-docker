@@ -69,6 +69,33 @@ if [ -d $ICQQ_PLUGIN_PATH"/.git" ]; then
     else
         git pull origin main --allow-unrelated-histories
     fi
+    if [ -e $ICQQ_PLUGIN_PATH"/config.yaml" ]; then
+        if [! -e /app/Yunzai-Bot/config/ICQQ.yaml] then
+            echo -e "检测到 ICQQ-Plugin 配置文件旧位置，复制到config/ICQQ.yaml\n"
+            cp config.yaml /app/Yunzai-Bot/config/ICQQ.yaml
+            mv config.yaml ICQQ.yaml.bak
+        fi
+    else
+        if [ -e ICQQ.yaml.bak ]; then
+            if [ ICQQ.yaml.bak -nt /app/Yunzai-Bot/config/ICQQ.yaml ]; then
+                cp ICQQ.yaml.bak /app/Yunzai-Bot/config/ICQQ.yaml
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/ICQQ.yaml ]; then
+            if [!-e /app/Yunzai-Bot/config/ICQQ.yaml ]; then
+                echo -e "\n时雨：乐"
+                cp /app/Yunzai-Bot/config/config/ICQQ.yaml /app/Yunzai-Bot/config/ICQQ.yaml
+            fi
+            else
+                if [ /app/Yunzai-Bot/config/config/ICQQ.yaml -nt /app/Yunzai-Bot/config/ICQQ.yaml]; then
+                cp /app/Yunzai-Bot/config/config/ICQQ.yaml /app/Yunzai-Bot/config/ICQQ.yaml
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml ]
+            if [ /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml -nt /app/Yunzai-Bot/config/ICQQ.yaml ]
+            cp app/Yunzai-Bot/config/config/adapter/ICQQ.yaml /app/Yunzai-Bot/config/ICQQ.yaml
+        fi
+    fi
 fi
 
 if [ -d $QQGUILD_PLUGIN_PATH"/.git" ]; then
@@ -81,6 +108,33 @@ if [ -d $QQGUILD_PLUGIN_PATH"/.git" ]; then
         git stash pop
     else
         git pull origin main --allow-unrelated-histories
+    fi
+    if [ -e $QQGUILD_PLUGIN_PATH"/config.yaml" ]; then
+        if [! -e /app/Yunzai-Bot/config/QQGuild.yaml] then
+            echo -e "检测到 QQGuild-Plugin 配置文件旧位置，复制到config/QQGuild.yaml\n"
+            cp config.yaml /app/Yunzai-Bot/config/QQGuild.yaml
+            mv config.yaml QQGuild.yaml.bak
+        fi
+    else
+        if [ -e QQGuild.yaml.bak ]; then
+            if [ QQGuild.yaml.bak -nt /app/Yunzai-Bot/config/QQGuild.yaml ]; then
+                cp QQGuild.yaml.bak /app/Yunzai-Bot/config/QQGuild.yaml
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/QQGuild.yaml ]; then
+            if [!-e /app/Yunzai-Bot/config/QQGuild.yaml ]; then
+                echo -e "\n时雨：乐"
+                cp /app/Yunzai-Bot/config/config/QQGuild.yaml /app/Yunzai-Bot/config/QQGuild.yaml
+            fi
+            else
+                if [ /app/Yunzai-Bot/config/config/QQGuild.yaml -nt /app/Yunzai-Bot/config/QQGuild.yaml]; then
+                cp /app/Yunzai-Bot/config/config/QQGuild.yaml /app/Yunzai-Bot/config/QQGuild.yaml
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml ]
+            if [ /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml -nt /app/Yunzai-Bot/config/QQGuild.yaml ]
+            cp app/Yunzai-Bot/config/config/adapter/QQGuild.yaml /app/Yunzai-Bot/config/QQGuild.yaml
+        fi
     fi
 fi
 
@@ -95,6 +149,33 @@ if [ -d $TELEGRAM_PLUGIN_PATH"/.git" ]; then
     else
         git pull origin main --allow-unrelated-histories
     fi
+    if [ -e $TELEGRAM_PLUGIN_PATH"/config.yaml" ]; then
+        if [! -e /app/Yunzai-Bot/config/Telegram.yaml] then
+            echo -e "检测到 Telegram-Plugin 配置文件旧位置，复制到config/Telegram.yaml\n"
+            cp config.yaml /app/Yunzai-Bot/config/Telegram.yaml
+            mv config.yaml Telegram.yaml.bak
+        fi
+    else
+        if [ -e Telegram.yaml.bak ]; then
+            if [ Telegram.yaml.bak -nt /app/Yunzai-Bot/config/Telegram.yaml ]; then
+                cp Telegram.yaml.bak /app/Yunzai-Bot/config/Telegram.yaml
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/Telegram.yaml ]; then
+            if [!-e /app/Yunzai-Bot/config/Telegram.yaml ]; then
+                echo -e "\n时雨：乐"
+                cp /app/Yunzai-Bot/config/config/Telegram.yaml /app/Yunzai-Bot/config/Telegram.yaml
+            fi
+            else
+                if [ /app/Yunzai-Bot/config/config/Telegram.yaml -nt /app/Yunzai-Bot/config/Telegram.yaml]; then
+                cp /app/Yunzai-Bot/config/config/Telegram.yaml /app/Yunzai-Bot/config/Telegram.yaml
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/Telegram.yaml ]
+            if [ /app/Yunzai-Bot/config/config/adapter/Telegram.yaml -nt /app/Yunzai-Bot/config/Telegram.yaml ]
+            cp app/Yunzai-Bot/config/config/adapter/Telegram.yaml /app/Yunzai-Bot/config/Telegram.yaml
+        fi
+    fi
 fi
 
 if [ -d $KOOK_PLUGIN_PATH"/.git" ]; then
@@ -108,6 +189,33 @@ if [ -d $KOOK_PLUGIN_PATH"/.git" ]; then
     else
         git pull origin main --allow-unrelated-histories
     fi
+    if [ -e $KOOK_PLUGIN_PATH"/config.yaml" ]; then
+        if [! -e /app/Yunzai-Bot/config/KOOK.yaml] then
+            echo -e "检测到 KOOK-Plugin 配置文件旧位置，复制到config/KOOK.yaml\n"
+            cp config.yaml /app/Yunzai-Bot/config/KOOK.yaml
+            mv config.yaml KOOK.yaml.bak
+        fi
+    else
+        if [ -e KOOK.yaml.bak ]; then
+            if [ KOOK.yaml.bak -nt /app/Yunzai-Bot/config/KOOK.yaml ]; then
+                cp KOOK.yaml.bak /app/Yunzai-Bot/config/KOOK.yaml
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/KOOK.yaml ]; then
+            if [!-e /app/Yunzai-Bot/config/KOOK.yaml ]; then
+                echo -e "\n时雨：乐"
+                cp /app/Yunzai-Bot/config/config/KOOK.yaml /app/Yunzai-Bot/config/KOOK.yaml
+            fi
+            else
+                if [ /app/Yunzai-Bot/config/config/KOOK.yaml -nt /app/Yunzai-Bot/config/KOOK.yaml]; then
+                cp /app/Yunzai-Bot/config/config/KOOK.yaml /app/Yunzai-Bot/config/KOOK.yaml
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/KOOK.yaml ]
+            if [ /app/Yunzai-Bot/config/config/adapter/KOOK.yaml -nt /app/Yunzai-Bot/config/KOOK.yaml ]
+            cp app/Yunzai-Bot/config/config/adapter/KOOK.yaml /app/Yunzai-Bot/config/KOOK.yaml
+        fi
+    fi
 fi
 
 if [ -d $DISCORD_PLUGIN_PATH"/.git" ]; then
@@ -120,6 +228,33 @@ if [ -d $DISCORD_PLUGIN_PATH"/.git" ]; then
         git stash pop
     else
         git pull origin main --allow-unrelated-histories
+    fi
+    if [ -e $DISCORD_PLUGIN_PATH"/config.yaml" ]; then
+        if [! -e /app/Yunzai-Bot/config/Discord.yaml] then
+            echo -e "检测到 Discord-Plugin 配置文件旧位置，复制到config/Discord.yaml\n"
+            cp config.yaml /app/Yunzai-Bot/config/Discord.yaml
+            mv config.yaml Discord.yaml.bak
+        fi
+    else
+        if [ -e Discord.yaml.bak ]; then
+            if [ Discord.yaml.bak -nt /app/Yunzai-Bot/config/Discord.yaml ]; then
+                cp Discord.yaml.bak /app/Yunzai-Bot/config/Discord.yaml
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/Discord.yaml ]; then
+            if [!-e /app/Yunzai-Bot/config/Discord.yaml ]; then
+                echo -e "\n时雨：乐"
+                cp /app/Yunzai-Bot/config/config/Discord.yaml /app/Yunzai-Bot/config/Discord.yaml
+            fi
+            else
+                if [ /app/Yunzai-Bot/config/config/Discord.yaml -nt /app/Yunzai-Bot/config/Discord.yaml]; then
+                cp /app/Yunzai-Bot/config/config/Discord.yaml /app/Yunzai-Bot/config/Discord.yaml
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/Discord.yaml ]
+            if [ /app/Yunzai-Bot/config/config/adapter/Discord.yaml -nt /app/Yunzai-Bot/config/Discord.yaml ]
+            cp app/Yunzai-Bot/config/config/adapter/Discord.yaml /app/Yunzai-Bot/config/Discord.yaml
+        fi
     fi
 fi
 
@@ -222,4 +357,97 @@ EXIT_CODE=$?
 if [[ $EXIT_CODE != 0 ]]; then
     echo -e "\n ================ \n ${Warn} ${YellowBG} 启动 Yunzai 失败 ${Font} \n ================ \n"
     tail -f /dev/null
+fi
+
+if [[ $EXIT_CODE == 0 ]]; then
+    if [[ -e /app/Yunzai-Bot/config/ICQQ.yaml ]]; then
+        if [[ -e $ICQQ_PLUGIN_PATH"/ICQQ.yaml.bak" ]]; then
+            if [[ /app/Yunzai-Bot/config/ICQQ.yaml -nt $ICQQ_PLUGIN_PATH"/ICQQ.yaml.bak" ]]; then
+                cp /app/Yunzai-Bot/config/ICQQ.yaml $ICQQ_PLUGIN_PATH/ICQQ.yaml.bak
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/ICQQ.yaml ]; then
+            if [ /app/Yunzai-Bot/config/ICQQ.yaml -nt /app/Yunzai-Bot/config/config/ICQQ.yaml ]; then
+                cp /app/Yunzai-Bot/config/ICQQ.yaml /app/Yunzai-Bot/config/config/ICQQ.yaml
+            fi
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml ]; then
+            if [ /app/Yunzai-Bot/config/ICQQ.yaml -nt /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml ]; then
+                cp /app/Yunzai-Bot/config/ICQQ.yaml /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml
+            fi
+        fi
+    fi
+    if [[ -e /app/Yunzai-Bot/config/QQGuild.yaml ]]; then
+        if [[ -e $QQGUILD_PLUGIN_PATH"/QQGuild.yaml.bak" ]]; then
+            if [[ /app/Yunzai-Bot/config/QQGuild.yaml -nt $QQGUILD_PLUGIN_PATH"/QQGuild.yaml.bak" ]]; then
+                cp /app/Yunzai-Bot/config/QQGuild.yaml $QQGUILD_PLUGIN_PATH/QQGuild.yaml.bak
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/QQGuild.yaml ]; then
+            if [ /app/Yunzai-Bot/config/QQGuild.yaml -nt /app/Yunzai-Bot/config/config/QQGuild.yaml ]; then
+                cp /app/Yunzai-Bot/config/QQGuild.yaml /app/Yunzai-Bot/config/config/QQGuild.yaml
+            fi
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml ]; then
+            if [ /app/Yunzai-Bot/config/QQGuild.yaml -nt /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml ]; then
+                cp /app/Yunzai-Bot/config/QQGuild.yaml /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml
+            fi
+        fi
+    fi
+    if [[ -e /app/Yunzai-Bot/config/Telegram.yaml ]]; then
+        if [[ -e $TELEGRAM_PLUGIN_PATH"/Telegram.yaml.bak" ]]; then
+            if [[ /app/Yunzai-Bot/config/Telegram.yaml -nt $TELEGRAM_PLUGIN_PATH"/Telegram.yaml.bak" ]]; then
+                cp /app/Yunzai-Bot/config/Telegram.yaml $TELEGRAM_PLUGIN_PATH/Telegram.yaml.bak
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/Telegram.yaml ]; then
+            if [ /app/Yunzai-Bot/config/Telegram.yaml -nt /app/Yunzai-Bot/config/config/Telegram.yaml ]; then
+                cp /app/Yunzai-Bot/config/Telegram.yaml /app/Yunzai-Bot/config/config/Telegram.yaml
+            fi
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/Telegram.yaml ]; then
+            if [ /app/Yunzai-Bot/config/Telegram.yaml -nt /app/Yunzai-Bot/config/config/adapter/Telegram.yaml ]; then
+                cp /app/Yunzai-Bot/config/Telegram.yaml /app/Yunzai-Bot/config/config/adapter/Telegram.yaml
+            fi
+        fi
+    fi
+    if [[ -e /app/Yunzai-Bot/config/KOOK.yaml ]]; then
+        if [[ -e $KOOK_PLUGIN_PATH"/KOOK.yaml.bak" ]]; then
+            if [[ /app/Yunzai-Bot/config/KOOK.yaml -nt $KOOK_PLUGIN_PATH"/KOOK.yaml.bak" ]]; then
+                cp /app/Yunzai-Bot/config/KOOK.yaml $KOOK_PLUGIN_PATH/KOOK.yaml.bak
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/KOOK.yaml ]; then
+            if [ /app/Yunzai-Bot/config/KOOK.yaml -nt /app/Yunzai-Bot/config/config/KOOK.yaml ]; then
+                cp /app/Yunzai-Bot/config/KOOK.yaml /app/Yunzai-Bot/config/config/KOOK.yaml
+            fi
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/KOOK.yaml ]; then
+            if [ /app/Yunzai-Bot/config/KOOK.yaml -nt /app/Yunzai-Bot/config/config/adapter/KOOK.yaml ]; then
+                cp /app/Yunzai-Bot/config/KOOK.yaml /app/Yunzai-Bot/config/config/adapter/KOOK.yaml
+            fi
+        fi
+    fi
+    if [[ -e /app/Yunzai-Bot/config/Discord.yaml ]]; then
+        if [[ -e $DISCORD_PLUGIN_PATH"/Discord.yaml.bak" ]]; then
+            if [[ /app/Yunzai-Bot/config/Discord.yaml -nt $DISCORD_PLUGIN_PATH"/Discord.yaml.bak" ]]; then
+                cp /app/Yunzai-Bot/config/Discord.yaml $DISCORD_PLUGIN_PATH/Discord.yaml.bak
+            fi
+        fi
+        if [ -e /app/Yunzai-Bot/config/config/Discord.yaml ]; then
+            if [ /app/Yunzai-Bot/config/Discord.yaml -nt /app/Yunzai-Bot/config/config/Discord.yaml ]; then
+                cp /app/Yunzai-Bot/config/Discord.yaml /app/Yunzai-Bot/config/config/Discord.yaml
+            fi
+        fi
+        # 自用
+        if [ -e /app/Yunzai-Bot/config/config/adapter/Discord.yaml ]; then
+            if [ /app/Yunzai-Bot/config/Discord.yaml -nt /app/Yunzai-Bot/config/config/adapter/Discord.yaml ]; then
+                cp /app/Yunzai-Bot/config/Discord.yaml /app/Yunzai-Bot/config/config/adapter/Discord.yaml
+            fi
+        fi
+    fi
 fi
