@@ -70,7 +70,7 @@ if [ -d $ICQQ_PLUGIN_PATH"/.git" ]; then
         git pull origin main --allow-unrelated-histories
     fi
     if [ -e $ICQQ_PLUGIN_PATH"/config.yaml" ]; then
-        if [! -e /app/Yunzai-Bot/config/ICQQ.yaml] then
+        if [! -e /app/Yunzai-Bot/config/ICQQ.yaml]; then
             echo -e "检测到 ICQQ-Plugin 配置文件旧位置，复制到config/ICQQ.yaml\n"
             cp config.yaml /app/Yunzai-Bot/config/ICQQ.yaml
             mv config.yaml ICQQ.yaml.bak
@@ -92,8 +92,8 @@ if [ -d $ICQQ_PLUGIN_PATH"/.git" ]; then
             fi
         fi
         # 自用
-        if [ -e /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml ]
-            if [ /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml -nt /app/Yunzai-Bot/config/ICQQ.yaml ]
+        if [ -e /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml ]; then
+            if [ /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml -nt /app/Yunzai-Bot/config/ICQQ.yaml ]; then
             cp app/Yunzai-Bot/config/config/adapter/ICQQ.yaml /app/Yunzai-Bot/config/ICQQ.yaml
         fi
     fi
@@ -111,7 +111,7 @@ if [ -d $QQGUILD_PLUGIN_PATH"/.git" ]; then
         git pull origin main --allow-unrelated-histories
     fi
     if [ -e $QQGUILD_PLUGIN_PATH"/config.yaml" ]; then
-        if [! -e /app/Yunzai-Bot/config/QQGuild.yaml] then
+        if [! -e /app/Yunzai-Bot/config/QQGuild.yaml]; then
             echo -e "检测到 QQGuild-Plugin 配置文件旧位置，复制到config/QQGuild.yaml\n"
             cp config.yaml /app/Yunzai-Bot/config/QQGuild.yaml
             mv config.yaml QQGuild.yaml.bak
@@ -133,8 +133,8 @@ if [ -d $QQGUILD_PLUGIN_PATH"/.git" ]; then
             fi
         fi
         # 自用
-        if [ -e /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml ]
-            if [ /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml -nt /app/Yunzai-Bot/config/QQGuild.yaml ]
+        if [ -e /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml ]; then
+            if [ /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml -nt /app/Yunzai-Bot/config/QQGuild.yaml ]; then
             cp app/Yunzai-Bot/config/config/adapter/QQGuild.yaml /app/Yunzai-Bot/config/QQGuild.yaml
         fi
     fi
@@ -152,7 +152,7 @@ if [ -d $TELEGRAM_PLUGIN_PATH"/.git" ]; then
         git pull origin main --allow-unrelated-histories
     fi
     if [ -e $TELEGRAM_PLUGIN_PATH"/config.yaml" ]; then
-        if [! -e /app/Yunzai-Bot/config/Telegram.yaml] then
+        if [! -e /app/Yunzai-Bot/config/Telegram.yaml]; then
             echo -e "检测到 Telegram-Plugin 配置文件旧位置，复制到config/Telegram.yaml\n"
             cp config.yaml /app/Yunzai-Bot/config/Telegram.yaml
             mv config.yaml Telegram.yaml.bak
@@ -174,8 +174,8 @@ if [ -d $TELEGRAM_PLUGIN_PATH"/.git" ]; then
             fi
         fi
         # 自用
-        if [ -e /app/Yunzai-Bot/config/config/adapter/Telegram.yaml ]
-            if [ /app/Yunzai-Bot/config/config/adapter/Telegram.yaml -nt /app/Yunzai-Bot/config/Telegram.yaml ]
+        if [ -e /app/Yunzai-Bot/config/config/adapter/Telegram.yaml ]; then
+            if [ /app/Yunzai-Bot/config/config/adapter/Telegram.yaml -nt /app/Yunzai-Bot/config/Telegram.yaml ]; then
             cp app/Yunzai-Bot/config/config/adapter/Telegram.yaml /app/Yunzai-Bot/config/Telegram.yaml
         fi
     fi
@@ -193,7 +193,7 @@ if [ -d $KOOK_PLUGIN_PATH"/.git" ]; then
         git pull origin main --allow-unrelated-histories
     fi
     if [ -e $KOOK_PLUGIN_PATH"/config.yaml" ]; then
-        if [! -e /app/Yunzai-Bot/config/KOOK.yaml] then
+        if [! -e /app/Yunzai-Bot/config/KOOK.yaml]; then
             echo -e "检测到 KOOK-Plugin 配置文件旧位置，复制到config/KOOK.yaml\n"
             cp config.yaml /app/Yunzai-Bot/config/KOOK.yaml
             mv config.yaml KOOK.yaml.bak
@@ -215,8 +215,8 @@ if [ -d $KOOK_PLUGIN_PATH"/.git" ]; then
             fi
         fi
         # 自用
-        if [ -e /app/Yunzai-Bot/config/config/adapter/KOOK.yaml ]
-            if [ /app/Yunzai-Bot/config/config/adapter/KOOK.yaml -nt /app/Yunzai-Bot/config/KOOK.yaml ]
+        if [ -e /app/Yunzai-Bot/config/config/adapter/KOOK.yaml ]; then
+            if [ /app/Yunzai-Bot/config/config/adapter/KOOK.yaml -nt /app/Yunzai-Bot/config/KOOK.yaml ]; then
             cp app/Yunzai-Bot/config/config/adapter/KOOK.yaml /app/Yunzai-Bot/config/KOOK.yaml
         fi
     fi
@@ -234,7 +234,7 @@ if [ -d $DISCORD_PLUGIN_PATH"/.git" ]; then
         git pull origin main --allow-unrelated-histories
     fi
     if [ -e $DISCORD_PLUGIN_PATH"/config.yaml" ]; then
-        if [! -e /app/Yunzai-Bot/config/Discord.yaml] then
+        if [! -e /app/Yunzai-Bot/config/Discord.yaml]; then
             echo -e "检测到 Discord-Plugin 配置文件旧位置，复制到config/Discord.yaml\n"
             cp config.yaml /app/Yunzai-Bot/config/Discord.yaml
             mv config.yaml Discord.yaml.bak
@@ -256,8 +256,8 @@ if [ -d $DISCORD_PLUGIN_PATH"/.git" ]; then
             fi
         fi
         # 自用
-        if [ -e /app/Yunzai-Bot/config/config/adapter/Discord.yaml ]
-            if [ /app/Yunzai-Bot/config/config/adapter/Discord.yaml -nt /app/Yunzai-Bot/config/Discord.yaml ]
+        if [ -e /app/Yunzai-Bot/config/config/adapter/Discord.yaml ]; then 
+            if [ /app/Yunzai-Bot/config/config/adapter/Discord.yaml -nt /app/Yunzai-Bot/config/Discord.yaml ]; then
             cp app/Yunzai-Bot/config/config/adapter/Discord.yaml /app/Yunzai-Bot/config/Discord.yaml
         fi
     fi
