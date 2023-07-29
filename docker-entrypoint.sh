@@ -89,6 +89,7 @@ if [ -d $ICQQ_PLUGIN_PATH"/.git" ]; then
             else
                 if [ /app/Yunzai-Bot/config/config/ICQQ.yaml -nt /app/Yunzai-Bot/config/ICQQ.yaml]; then
                 cp /app/Yunzai-Bot/config/config/ICQQ.yaml /app/Yunzai-Bot/config/ICQQ.yaml
+            fi
         fi
         # 自用
         if [ -e /app/Yunzai-Bot/config/config/adapter/ICQQ.yaml ]
@@ -129,6 +130,7 @@ if [ -d $QQGUILD_PLUGIN_PATH"/.git" ]; then
             else
                 if [ /app/Yunzai-Bot/config/config/QQGuild.yaml -nt /app/Yunzai-Bot/config/QQGuild.yaml]; then
                 cp /app/Yunzai-Bot/config/config/QQGuild.yaml /app/Yunzai-Bot/config/QQGuild.yaml
+            fi
         fi
         # 自用
         if [ -e /app/Yunzai-Bot/config/config/adapter/QQGuild.yaml ]
@@ -169,6 +171,7 @@ if [ -d $TELEGRAM_PLUGIN_PATH"/.git" ]; then
             else
                 if [ /app/Yunzai-Bot/config/config/Telegram.yaml -nt /app/Yunzai-Bot/config/Telegram.yaml]; then
                 cp /app/Yunzai-Bot/config/config/Telegram.yaml /app/Yunzai-Bot/config/Telegram.yaml
+            fi
         fi
         # 自用
         if [ -e /app/Yunzai-Bot/config/config/adapter/Telegram.yaml ]
@@ -209,6 +212,7 @@ if [ -d $KOOK_PLUGIN_PATH"/.git" ]; then
             else
                 if [ /app/Yunzai-Bot/config/config/KOOK.yaml -nt /app/Yunzai-Bot/config/KOOK.yaml]; then
                 cp /app/Yunzai-Bot/config/config/KOOK.yaml /app/Yunzai-Bot/config/KOOK.yaml
+            fi
         fi
         # 自用
         if [ -e /app/Yunzai-Bot/config/config/adapter/KOOK.yaml ]
@@ -249,6 +253,7 @@ if [ -d $DISCORD_PLUGIN_PATH"/.git" ]; then
             else
                 if [ /app/Yunzai-Bot/config/config/Discord.yaml -nt /app/Yunzai-Bot/config/Discord.yaml]; then
                 cp /app/Yunzai-Bot/config/config/Discord.yaml /app/Yunzai-Bot/config/Discord.yaml
+            fi
         fi
         # 自用
         if [ -e /app/Yunzai-Bot/config/config/adapter/Discord.yaml ]
