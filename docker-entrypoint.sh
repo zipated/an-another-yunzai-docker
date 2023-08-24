@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
-QQGUILD_PLUGIN_PATH="/app/Yunzai-Bot/plugins/QQGuild-Plugin"
-TELEGRAM_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Telegram-Plugin"
-KOOK_PLUGIN_PATH="/app/Yunzai-Bot/plugins/KOOK-Plugin"
-DISCORD_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Discord-Plugin"
 ICQQ_PLUGIN_PATH="/app/Yunzai-Bot/plugins/ICQQ-Plugin"
+QQGUILD_PLUGIN_PATH="/app/Yunzai-Bot/plugins/QQGuild-Plugin"
+WECHAT_PLUGIN_PATH="/app/Yunzai-Bot/plugins/WeChat-Plugin"
+KOOK_PLUGIN_PATH="/app/Yunzai-Bot/plugins/KOOK-Plugin"
+TELEGRAM_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Telegram-Plugin"
+DISCORD_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Discord-Plugin"
+PROXY_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Proxy-Plugin"
+TRSS_PLUGIN_PATH="/app/Yunzai-Bot/plugins/TRSS-Plugin"
 
 MIAO_PLUGIN_PATH="/app/Yunzai-Bot/plugins/miao-plugin"
 GENSHIN_PATH="/app/Yunzai-Bot/plugins/genshin"
@@ -84,8 +87,8 @@ if [[ -d $QQGUILD_PLUGIN_PATH"/.git" ]]; then
     fi
 fi
 
-if [[ -d $TELEGRAM_PLUGIN_PATH"/.git" ]]; then
-    cd $TELEGRAM_PLUGIN_PATH
+if [[ -d $WECHAT_PLUGIN_PATH"/.git" ]]; then
+    cd $WECHAT_PLUGIN_PATH
     if [[ -n $(git status -s) ]]; then
         echo -e "\n当前工作区有修改，尝试暂存后更新。"
         git add .
@@ -110,6 +113,19 @@ if [[ -d $KOOK_PLUGIN_PATH"/.git" ]]; then
     fi
 fi
 
+if [[ -d $TELEGRAM_PLUGIN_PATH"/.git" ]]; then
+    cd $TELEGRAM_PLUGIN_PATH
+    if [[ -n $(git status -s) ]]; then
+        echo -e "\n当前工作区有修改，尝试暂存后更新。"
+        git add .
+        git stash
+        git pull origin main --allow-unrelated-histories --rebase
+        git stash pop
+    else
+        git pull origin main --allow-unrelated-histories
+    fi
+fi
+
 if [[ -d $DISCORD_PLUGIN_PATH"/.git" ]]; then
     cd $DISCORD_PLUGIN_PATH
     if [[ -n $(git status -s) ]]; then
@@ -123,7 +139,33 @@ if [[ -d $DISCORD_PLUGIN_PATH"/.git" ]]; then
     fi
 fi
 
-if [ -d $ICQQ_PLUGIN_PATH"/.git" ] || [ -d $QQGUILD_PLUGIN_PATH"/.git" ] || [ -d $TELEGRAM_PLUGIN_PATH"/.git" ] || [ -d $KOOK_PLUGIN_PATH"/.git" ] || [ -d $DISCORD_PLUGIN_PATH"/.git" ]; then
+if [[ -d $PROXY_PLUGIN_PATH"/.git" ]]; then
+    cd $PROXY_PLUGIN_PATH
+    if [[ -n $(git status -s) ]]; then
+        echo -e "\n当前工作区有修改，尝试暂存后更新。"
+        git add .
+        git stash
+        git pull origin main --allow-unrelated-histories --rebase
+        git stash pop
+    else
+        git pull origin main --allow-unrelated-histories
+    fi
+fi
+
+if [[ -d $TRSS_PLUGIN_PATH"/.git" ]]; then
+    cd $TRSS_PLUGIN_PATH
+    if [[ -n $(git status -s) ]]; then
+        echo -e "\n当前工作区有修改，尝试暂存后更新。"
+        git add .
+        git stash
+        git pull origin main --allow-unrelated-histories --rebase
+        git stash pop
+    else
+        git pull origin main --allow-unrelated-histories
+    fi
+fi
+
+if [ -d $ICQQ_PLUGIN_PATH"/.git" ] || [ -d $QQGUILD_PLUGIN_PATH"/.git" ] || [ -d $WECHAT_PLUGIN_PATH"/.git" ] || [ -d $KOOK_PLUGIN_PATH"/.git" ] || [ -d $TELEGRAM_PLUGIN_PATH"/.git" ] || [ -d $DISCORD_PLUGIN_PATH"/.git" ] || [ -d $PROXY_PLUGIN_PATH"/.git" ] || [ -d $TRSS_PLUGIN_PATH"/.git" ]; then
     cd /app/Yunzai-Bot
     pnpm install
 fi
