@@ -1,12 +1,14 @@
 <strong>自用</strong>的某机器人的docker镜像（需要py的用Dockerfile_poetry
 
-主要是不想用那个脚本~~（从喵喵迁移过来~~
+个人原因不想用那个脚本
 
 参考喵~~和SirlyDreamer/Yunzai-Bot-Docker~~
 
 <details><summary>适配器配置文件问题建议自行解决</summary>
 
-  要是问为什么不丢到config/config会被某机器人的项目所有者踢出他能管到的群
+  <!-- 要是问为什么不丢到config/config会被某机器人的项目所有者踢出他能管到的群 -->
+
+  请直接用原脚本。
 
 </details>
 
@@ -15,7 +17,7 @@
 
   TimeRainStarSky也不喜欢
 
-  ~~***2023.08.28 20:13 cdc5d46dbe5e5384a9c2d12b1921826cfcc74683 .gitignore + config/*.yaml***~~
+  <!-- ~~***2023.08.28 20:13 cdc5d46dbe5e5384a9c2d12b1921826cfcc74683 .gitignore + config/*.yaml***~~ -->
 
 </details>
 
