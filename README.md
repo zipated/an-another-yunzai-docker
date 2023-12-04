@@ -40,15 +40,15 @@ services:
       - ./Yunzai/plugins/example:/app/Yunzai-Bot/plugins/example                          # js插件
       # - ./Yunzai/plugins/TRSS-Plugin:/app/Yunzai-Bot/plugins/TRSS-Plugin                  # TRSS插件
       - ./Yunzai/plugins/miao-plugin:/app/Yunzai-Bot/plugins/miao-plugin                  # 喵喵插件
-      # - ./Yunzai/plugins/Yunzai-ICQQ-Plugin:/app/Yunzai-Bot/plugins/Yunzai-ICQQ-Plugin    # TRSS适配器 ↓
-      # - ./Yunzai/plugins/Yunzai-QQBot-Plugin:/app/Yunzai-Bot/plugins/Yunzai-QQBot-Plugin
-      # - ./Yunzai/plugins/Yunzai-QQGuild-Plugin:/app/Yunzai-Bot/plugins/Yunzai-QQGuild-Plugin
-      # - ./Yunzai/plugins/Yunzai-WeChat-Plugin:/app/Yunzai-Bot/plugins/Yunzai-WeChat-Plugin
-      # - ./Yunzai/plugins/Yunzai-mysVilla-Plugin:/app/Yunzai-Bot/plugins/Yunzai-mysVilla-Plugin
-      # - ./Yunzai/plugins/Yunzai-KOOK-Plugin:/app/Yunzai-Bot/plugins/Yunzai-KOOK-Plugin
-      # - ./Yunzai/plugins/Yunzai-Telegram-Plugin:/app/Yunzai-Bot/plugins/Yunzai-Telegram-Plugin
-      # - ./Yunzai/plugins/Yunzai-Discord-Plugin:/app/Yunzai-Bot/plugins/Yunzai-Discord-Plugin
-      # - ./Yunzai/plugins/Yunzai-Route-Plugin:/app/Yunzai-Bot/plugins/Yunzai-Route-Plugin  # TRSS适配器 ↑
+      # - ./Yunzai/plugins/Yunzai-ICQQ-Plugin:/app/Yunzai-Bot/plugins/ICQQ-Plugin    # TRSS适配器 ↓
+      # - ./Yunzai/plugins/Yunzai-QQBot-Plugin:/app/Yunzai-Bot/plugins/QQBot-Plugin
+      # - ./Yunzai/plugins/Yunzai-QQGuild-Plugin:/app/Yunzai-Bot/plugins/QQGuild-Plugin
+      # - ./Yunzai/plugins/Yunzai-WeChat-Plugin:/app/Yunzai-Bot/plugins/WeChat-Plugin
+      # - ./Yunzai/plugins/Yunzai-mysVilla-Plugin:/app/Yunzai-Bot/plugins/mysVilla-Plugin
+      # - ./Yunzai/plugins/Yunzai-KOOK-Plugin:/app/Yunzai-Bot/plugins/KOOK-Plugin
+      # - ./Yunzai/plugins/Yunzai-Telegram-Plugin:/app/Yunzai-Bot/plugins/Telegram-Plugin
+      # - ./Yunzai/plugins/Yunzai-Discord-Plugin:/app/Yunzai-Bot/plugins/Discord-Plugin
+      # - ./Yunzai/plugins/Yunzai-Route-Plugin:/app/Yunzai-Bot/plugins/Route-Plugin  # TRSS适配器 ↑
       # - ./Yunzai/plugins/xiaoyao-cvs-plugin:/app/Yunzai-Bot/plugins/xiaoyao-cvs-plugin    # cvs图鉴插件
       # - ./Yunzai/plugins/Guoba-Plugin:/app/Yunzai-Bot/plugins/Guoba-Plugin                # 锅巴插件
       # - ./Yunzai/plugins/expand-plugin:/app/Yunzai-Bot/plugins/expand-plugin              # 拓展插件
