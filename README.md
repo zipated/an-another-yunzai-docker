@@ -6,8 +6,6 @@
 
 <details><summary>适配器配置文件问题建议自行解决</summary>
 
-  <!-- 要是问为什么不丢到config/config会被某机器人的项目所有者踢出他能管到的群 -->
-
   请直接用原脚本。
 
 </details>
@@ -15,9 +13,7 @@
 
 <details><summary>建议不要用我这个，反正没人看</summary>
 
-  TimeRainStarSky也不喜欢
-
-  <!-- ~~***2023.08.28 20:13 cdc5d46dbe5e5384a9c2d12b1921826cfcc74683 .gitignore + config/*.yaml***~~ -->
+  ~~除非和我一样试了确实用不了他脚本（~~
 
 </details>
 
@@ -25,6 +21,8 @@
 
 docker-compose.yaml部分参考（自行下载/修改映射需要的部分，例如[genshin]、[miao-plugin](https://github.com/yoimiya-kokomi/miao-plugin)、[默认的js插件]或其他插件/适配器~~（虽然前面这几个默认会带/下载~~
 ```
+version: "3"
+services:
   trss-yunzai:
     container_name: TRSS-Yunzai
     build: .
