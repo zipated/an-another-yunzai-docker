@@ -47,7 +47,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 RUN git clone --depth=1 --branch main https://gitee.com/TimeRainStarSky/Yunzai.git /app/Yunzai-Bot \
     && cd /app/Yunzai-Bot \
     && sed -i 's/127.0.0.1/redis/g' ./config/default_config/redis.yaml \
-    && pnpm i \
+    && pnpm install -P \
     && git remote set-url origin https://gitee.com/TimeRainStarSky/Yunzai.git
 
 COPY --from=resource /res/entrypoint.sh /app/Yunzai-Bot/entrypoint.sh
