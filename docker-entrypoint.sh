@@ -72,9 +72,11 @@ fi
 
 #自用
 if [[ -d $ICQQ_PLUGIN_PATH"/.git" ]] || [[ -d $QQBOT_PLUGIN_PATH"/.git" ]] || [[ -d $QQGUILD_PLUGIN_PATH"/.git" ]] || [[ -d $WECHAT_PLUGIN_PATH"/.git" ]] || [[ -d $MYSVILLA_PLUGIN_PATH"/.git" ]] || [[ -d $KOOK_PLUGIN_PATH"/.git" ]] || [[ -d $TELEGRAM_PLUGIN_PATH"/.git" ]] || [[ -d $DISCORD_PLUGIN_PATH"/.git" ]] || [[ -d $ROUTE_PLUGIN_PATH"/.git" ]] || [[ -d $TRSS_PLUGIN_PATH"/.git" ]]; then
-    if [[ ! -d "~/.ovo/trssconfig.ok" ]]; then
-        cp /app/Yunzai-Bot/config/config/adapter/* /app/Yunzai-Bot/config/
-        mkdir ~/.ovo/trssconfig.ok
+    if [[ -d "/app/Yunzai-Bot/config/config/adapter" ]]; then
+        if [[ ! -f "$HOME/.ovo/trssconfig.ok" ]]; then
+            cp /app/Yunzai-Bot/config/config/adapter/* /app/Yunzai-Bot/config/
+            mkdir ~/.ovo/trssconfig.ok
+        fi
     fi
 fi
 
