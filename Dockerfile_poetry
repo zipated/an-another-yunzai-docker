@@ -36,7 +36,10 @@ RUN sed -i "s/deb.debian.org/mirrors.ustc.edu.cn/g" /etc/apt/sources.list \
     && npm install pnpm -g \
     && pnpm config set registry https://registry.npmmirror.com \
     \
-    && apt-get install -y python3-pip python3-venv \
+    && rm -rf /var/cache/* \
+    && rm -rf /tmp/*
+
+RUN apt-get update && apt-get install -y python3-pip python3-venv \
     && apt-get autoremove \
     && apt-get clean \
     && ln -s /usr/bin/python3 /usr/bin/python \

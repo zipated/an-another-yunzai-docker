@@ -17,6 +17,7 @@
 
 </details>
 
+<!-- 阿里云用海外机器构建 -->
 #
 
 docker-compose.yaml部分参考（自行下载/修改映射需要的部分，例如[genshin]、[miao-plugin](https://github.com/yoimiya-kokomi/miao-plugin)、[默认的js插件]或其他插件/适配器~~（虽然前面这几个默认会带/下载~~
@@ -25,7 +26,9 @@ version: "3"
 services:
   trss-yunzai:
     container_name: TRSS-Yunzai
-    build: .
+    # build: .
+    image: registry.cn-hangzhou.aliyuncs.com/zipated/trss-yunzai:latest
+    # image: registry.cn-hangzhou.aliyuncs.com/zipated/trss-yunzai:poetry
     restart: always
     #ports:
       # - "50831:50831"                                   # 映射锅巴插件端口，格式"主机端口:容器内部端口"
@@ -37,7 +40,7 @@ services:
       - ./Yunzai/plugins/example:/app/Yunzai-Bot/plugins/example                          # js插件
       # - ./Yunzai/plugins/TRSS-Plugin:/app/Yunzai-Bot/plugins/TRSS-Plugin                  # TRSS插件
       - ./Yunzai/plugins/miao-plugin:/app/Yunzai-Bot/plugins/miao-plugin                  # 喵喵插件
-      # - ./Yunzai/plugins/Yunzai-ICQQ-Plugin:/app/Yunzai-Bot/plugins/Yunzai-ICQQ-Plugin  # TRSS适配器 ↓
+      # - ./Yunzai/plugins/Yunzai-ICQQ-Plugin:/app/Yunzai-Bot/plugins/Yunzai-ICQQ-Plugin    # TRSS适配器 ↓
       # - ./Yunzai/plugins/Yunzai-QQBot-Plugin:/app/Yunzai-Bot/plugins/Yunzai-QQBot-Plugin
       # - ./Yunzai/plugins/Yunzai-QQGuild-Plugin:/app/Yunzai-Bot/plugins/Yunzai-QQGuild-Plugin
       # - ./Yunzai/plugins/Yunzai-WeChat-Plugin:/app/Yunzai-Bot/plugins/Yunzai-WeChat-Plugin
