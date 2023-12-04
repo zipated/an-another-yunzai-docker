@@ -39,14 +39,16 @@ docker-compose.yaml部分参考（自行下载/修改映射需要的部分，例
       - ./Yunzai/plugins/example:/app/Yunzai-Bot/plugins/example                          # js插件
       # - ./Yunzai/plugins/TRSS-Plugin:/app/Yunzai-Bot/plugins/TRSS-Plugin                  # TRSS插件
       - ./Yunzai/plugins/miao-plugin:/app/Yunzai-Bot/plugins/miao-plugin                  # 喵喵插件
-      # - ./Yunzai/plugins/ICQQ-Plugin:/app/Yunzai-Bot/plugins/ICQQ-Plugin                  # TRSS-ICQQ
-      # - ./Yunzai/plugins/QQGuild-Plugin:/app/Yunzai-Bot/plugins/QQGuild-Plugin            # TRSS-QQ频道适配器
-      # - ./Yunzai/plugins/WeChat-Plugin:/app/Yunzai-Bot/plugins/WeChat-Plugin              # TRSS-WeChat适配器
-      # - ./Yunzai/plugins/KOOK-Plugin:/app/Yunzai-Bot/plugins/KOOK-Plugin                  # TRSS-KOOK适配器
-      # - ./Yunzai/plugins/Telegram-Plugin:/app/Yunzai-Bot/plugins/Telegram-Plugin          # TRSS-Telegram适配器
-      # - ./Yunzai/plugins/Discord-Plugin:/app/Yunzai-Bot/plugins/Discord-Plugin            # TRSS-Discord适配器
-      # - ./Yunzai/plugins/Proxy-Plugin:/app/Yunzai-Bot/plugins/Proxy-Plugin                # TRSS-Proxy插件
-      # - ./Yunzai/plugins/xiaoyao-cvs-plugin:/app/Yunzai-Bot/plugins/xiaoyao-cvs-plugin    # 图鉴插件
+      # - ./Yunzai/plugins/Yunzai-ICQQ-Plugin:/app/Yunzai-Bot/plugins/Yunzai-ICQQ-Plugin  # TRSS适配器 ↓
+      # - ./Yunzai/plugins/Yunzai-QQBot-Plugin:/app/Yunzai-Bot/plugins/Yunzai-QQBot-Plugin
+      # - ./Yunzai/plugins/Yunzai-QQGuild-Plugin:/app/Yunzai-Bot/plugins/Yunzai-QQGuild-Plugin
+      # - ./Yunzai/plugins/Yunzai-WeChat-Plugin:/app/Yunzai-Bot/plugins/Yunzai-WeChat-Plugin
+      # - ./Yunzai/plugins/Yunzai-mysVilla-Plugin:/app/Yunzai-Bot/plugins/Yunzai-mysVilla-Plugin
+      # - ./Yunzai/plugins/Yunzai-KOOK-Plugin:/app/Yunzai-Bot/plugins/Yunzai-KOOK-Plugin
+      # - ./Yunzai/plugins/Yunzai-Telegram-Plugin:/app/Yunzai-Bot/plugins/Yunzai-Telegram-Plugin
+      # - ./Yunzai/plugins/Yunzai-Discord-Plugin:/app/Yunzai-Bot/plugins/Yunzai-Discord-Plugin
+      # - ./Yunzai/plugins/Yunzai-Route-Plugin:/app/Yunzai-Bot/plugins/Yunzai-Route-Plugin  # TRSS适配器 ↑
+      # - ./Yunzai/plugins/xiaoyao-cvs-plugin:/app/Yunzai-Bot/plugins/xiaoyao-cvs-plugin    # cvs图鉴插件
       # - ./Yunzai/plugins/Guoba-Plugin:/app/Yunzai-Bot/plugins/Guoba-Plugin                # 锅巴插件
       # - ./Yunzai/plugins/expand-plugin:/app/Yunzai-Bot/plugins/expand-plugin              # 拓展插件
       # - ./Yunzai/plugins/flower-plugin:/app/Yunzai-Bot/plugins/flower-plugin              # 抽卡插件

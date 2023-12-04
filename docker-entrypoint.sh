@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 # TRSS适配器 和 TRSS-Plugin
-ICQQ_PLUGIN_PATH="/app/Yunzai-Bot/plugins/ICQQ-Plugin"
-QQGUILD_PLUGIN_PATH="/app/Yunzai-Bot/plugins/QQGuild-Plugin"
-WECHAT_PLUGIN_PATH="/app/Yunzai-Bot/plugins/WeChat-Plugin"
-KOOK_PLUGIN_PATH="/app/Yunzai-Bot/plugins/KOOK-Plugin"
-TELEGRAM_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Telegram-Plugin"
-DISCORD_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Discord-Plugin"
-PROXY_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Proxy-Plugin"
+ICQQ_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-ICQQ-Plugin"
+QQBOT_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-QQBot-Plugin"
+QQGUILD_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-QQGuild-Plugin"
+WECHAT_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-WeChat-Plugin"
+MYSVILLA_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-mysVilla-Plugin"
+KOOK_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-KOOK-Plugin"
+TELEGRAM_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-Telegram-Plugin"
+DISCORD_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-Discord-Plugin"
+ROUTE_PLUGIN_PATH="/app/Yunzai-Bot/plugins/Yunzai-Route-Plugin"
 TRSS_PLUGIN_PATH="/app/Yunzai-Bot/plugins/TRSS-Plugin"
 
 #默认插件
@@ -69,7 +71,7 @@ if [[ -d $PY_PLUGIN_PATH"/.git" ]]; then
 fi
 
 #自用
-if [[ -d $ICQQ_PLUGIN_PATH"/.git" ]] || [[ -d $QQGUILD_PLUGIN_PATH"/.git" ]] || [[ -d $WECHAT_PLUGIN_PATH"/.git" ]] || [[ -d $KOOK_PLUGIN_PATH"/.git" ]] || [[ -d $TELEGRAM_PLUGIN_PATH"/.git" ]] || [[ -d $DISCORD_PLUGIN_PATH"/.git" ]] || [[ -d $PROXY_PLUGIN_PATH"/.git" ]] || [[ -d $TRSS_PLUGIN_PATH"/.git" ]]; then
+if [[ -d $ICQQ_PLUGIN_PATH"/.git" ]] || [[ -d $QQBOT_PLUGIN_PATH"/.git" ]] || [[ -d $QQGUILD_PLUGIN_PATH"/.git" ]] || [[ -d $WECHAT_PLUGIN_PATH"/.git" ]] || [[ -d $MYSVILLA_PLUGIN_PATH"/.git" ]] || [[ -d $KOOK_PLUGIN_PATH"/.git" ]] || [[ -d $TELEGRAM_PLUGIN_PATH"/.git" ]] || [[ -d $DISCORD_PLUGIN_PATH"/.git" ]] || [[ -d $ROUTE_PLUGIN_PATH"/.git" ]] || [[ -d $TRSS_PLUGIN_PATH"/.git" ]]; then
     if [[ ! -d "~/.ovo/trssconfig.ok" ]]; then
         cp /app/Yunzai-Bot/config/config/adapter/* /app/Yunzai-Bot/config/
         mkdir ~/.ovo/trssconfig.ok
