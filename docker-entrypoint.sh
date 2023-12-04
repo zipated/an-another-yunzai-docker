@@ -77,7 +77,7 @@ if [[ -d $ICQQ_PLUGIN_PATH"/.git" ]] || [[ -d $QQBOT_PLUGIN_PATH"/.git" ]] || [[
     if [[ -d "/app/Yunzai-Bot/config/config/adapter" ]]; then
         if [[ ! -f "$HOME/.ovo/trssconfig.ok" ]]; then
             cp /app/Yunzai-Bot/config/config/adapter/* /app/Yunzai-Bot/config/
-            mkdir ~/.ovo/trssconfig.ok
+            touch ~/.ovo/trssconfig.ok
         fi
     fi
 fi
