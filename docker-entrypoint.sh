@@ -26,6 +26,7 @@ cd /app/Yunzai-Bot
 git pull
 
 # 批量更新git
+cd /app/Yunzai-Bot/plugins
 for file in ./*; do
     if test -d $file; then
         {
@@ -44,7 +45,7 @@ for file in ./*; do
                     git pull
                 fi
             done
-            echo -e "\n$file 执行完成\n"
+            echo -e "\n更新 $file 执行完成\n"
             cd ..
         }
     fi
@@ -63,6 +64,7 @@ fi
 
 if [[ -d $PY_PLUGIN_PATH"/.git" ]]; then
     if [[ ! -f "$HOME/.ovo/py.ok" ]]; then
+        cd $PY_PLUGIN_PATH
         echo -e "\n ================ \n ${Info} ${GreenBG} 更新 py-plugin 运行依赖 ${Font} \n ================ \n"
         poetry config virtualenvs.in-project true
         poetry install
@@ -85,7 +87,7 @@ if [[ -f "./config/config/redis.yaml" ]]; then
     echo -e "\n  修改Redis地址完成  \n"
 fi
 
-
+cd /app/Yunzai-Bot
 # pnpm i -P --registry=https://registry.npmmirror.com
 pnpm i
 
