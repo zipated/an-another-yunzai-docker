@@ -9,6 +9,7 @@ RUN dos2unix /res/entrypoint.sh \
 FROM node:lts-bullseye-slim AS runtime
 
 RUN sed -i "s/deb.debian.org/mirrors.ustc.edu.cn/g" /etc/apt/sources.list \
+    && sudo sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list \
     && apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y wget xz-utils dos2unix \
