@@ -29,6 +29,7 @@ services:
     # build: .
     image: registry.cn-hangzhou.aliyuncs.com/zipated/trss-yunzai:latest
     # image: registry.cn-hangzhou.aliyuncs.com/zipated/trss-yunzai:poetry
+    # image: registry.cn-hangzhou.aliyuncs.com/zipated/trss-yunzai:poetry_bookworm
     restart: always
     #ports:
       # - "50831:50831"                                   # 映射锅巴插件端口，格式"主机端口:容器内部端口"
