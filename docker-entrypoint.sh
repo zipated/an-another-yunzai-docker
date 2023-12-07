@@ -52,6 +52,7 @@ for file in ./*; do
 done
 
 # 检测 genshin 和 miao-plugin
+cd /app/Yunzai-Bot
 if [[ ! -d $GENSHIN_PATH"/.git" ]]; then
     echo -e "\n ${Warn} ${YellowBG} 检测到Yunzai-genshin目前没有安装，开始自动下载 ${Font} \n"
     git clone --depth=1 https://gitee.com/TimeRainStarSky/Yunzai-genshin.git ./plugins/genshin/
