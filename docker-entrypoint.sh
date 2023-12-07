@@ -38,11 +38,11 @@ for file in ./*; do
                     echo -e "\n当前工作区有修改，尝试暂存后更新。"
                     git add .
                     git stash
-                    git pull --allow-unrelated-histories
+                    git pull origin $BRANCH --allow-unrelated-histories --rebase
                     git stash pop
                 else
                     echo -e "\n拉取 $file 更新"
-                    git pull
+                    git pull --allow-unrelated-histories
                 fi
             done
             echo -e "\n更新 $file 执行完成\n"
